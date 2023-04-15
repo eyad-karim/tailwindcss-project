@@ -4,7 +4,7 @@ function Layout({ children }) {
   return (
     <>
       <header className="px-5 bg-white dark:bg-black flex flex-row justify-between items-center sticky top-0 left-0 right-0">
-        <h1 className="text-2xl py-3 text-white">post.com</h1>
+        <h1 className="text-2xl py-3 text-white">Logo</h1>
         <ul className="flex flex-row  items-center">
           <li className="mx-3 text-gray-400 hover:text-white transition-all flex items-center">
               <Link href="/">Home</Link>
@@ -18,7 +18,7 @@ function Layout({ children }) {
           <Link href="/create"><button className="btn">Create</button></Link>
         </ul>
       </header>
-      <div className="grid grid-cols-12 py-4">
+      <div className="container mx-auto py-4">
         {children}
       </div>
     </>
