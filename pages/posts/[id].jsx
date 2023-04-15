@@ -5,7 +5,9 @@ import { useRouter } from "next/router";
 function post(props) {
     return ( 
         <div className='lg:col-start-4 lg:col-span-6 md:col-span-10 sm:col-span-12 md:col-start-2'>
-            {props.post.body.split('\n').map((line , i)=> <p key={i}>{line}</p>)}
+            {props.post.body.split('\n').map((line , i) =>
+              <div key={i}>{line}</div>
+            )}
         </div>
      );
 }
