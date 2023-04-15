@@ -16,7 +16,7 @@ function CreatePost() {
     }
     const handleClick = () => {
         console.log(formData);
-        axios.post("http://localhost:3001/posts",formData)
+        axios.post("http://localhost:3000/api/posts/",formData)
     }
     return ( 
         <div className="mt-3 lg:col-start-4 lg:col-span-6 md:col-span-10 sm:col-span-12 md:col-start-2">

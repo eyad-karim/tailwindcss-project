@@ -6,7 +6,7 @@ function CreatePost(props) {
             {props.posts.map(post =>
                 <div key={post.id} className="col-span-1 shadow-lg border-[1px] border-gray-500 rounded-md p-5 flex flex-row">
                     <div className='flex-1'>
-                        {post.body.split('\n').map((line)=> <p>{line}</p>)}
+                        {post.body.split('\n').map((line,i)=> <p key={i}>{line}</p>)}
                     </div>
                     <Link href={"/posts/" + post.id}><button className="btn !m-0">open</button></Link>
                 </div>
@@ -21,7 +21,7 @@ export default CreatePost;
 
 
 export async function getStaticProps() {
-    const res = await fetch(`http://localhost:3001/posts/`)
+    const res = await fetch(`http://localhost:3000/api/posts/`)
     const data = await res.json()  
     return {
       props: {

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 function post(props) {
     return ( 
         <div className='lg:col-start-4 lg:col-span-6 md:col-span-10 sm:col-span-12 md:col-start-2'>
-            {props.post.body.split('\n').map((line)=> <p>{line}</p>)}
+            {props.post.body.split('\n').map((line , i)=> <p key={i}>{line}</p>)}
         </div>
      );
 }
@@ -13,7 +13,7 @@ function post(props) {
 export default post;
 
 export async function getStaticPaths(context) {
-    const res = await fetch(`http://localhost:3001/posts/`)
+    const res = await fetch(`http://localhost:3000/api/posts/`)
     const data = await res.json()  
     const paths = data.map(d =>  {
         return {
@@ -27,7 +27,7 @@ export async function getStaticPaths(context) {
 }
 
 export async function getStaticProps(context) {
-    const res = await fetch(`http://localhost:3001/posts/${context.params.id}`)
+    const res = await fetch(`http://localhost:3000/api/posts/${context.params.id}`)
     const data = await res.json()  
     return {
       props: {
