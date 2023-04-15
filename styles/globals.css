@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn{
+    @apply bg-black py-[5px] px-5 text-white rounded-md hover:bg-white hover:text-black transition-all active:scale-95 shadow-sm m-1 border-[1px] border-white hover:border-black
+}
+.card{
+    @apply hover:bg-white rounded-lg p-3 hover:shadow-lg border-[1px] border-transparent hover:border-gray-300 transition-all
+}
