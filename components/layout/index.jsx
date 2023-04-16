@@ -3,7 +3,7 @@ import Link from "next/link";
 function Layout({ children }) {
   return (
     <>
-      <header className="px-5 bg-white dark:bg-black flex flex-row justify-between items-center sticky top-0 left-0 right-0">
+      <header className="px-5 bg-black flex flex-row justify-between items-center sticky top-0 left-0 right-0">
         <h1 className="text-2xl py-3 text-white">Logo</h1>
         <ul className="flex flex-row  items-center">
           <li className="mx-3 text-gray-400 hover:text-white transition-all flex items-center">
@@ -18,7 +18,7 @@ function Layout({ children }) {
           <Link href="/create"><button className="btn">Create</button></Link>
         </ul>
       </header>
-      <div className="container mx-auto py-4">
+      <div className="container mx-auto p-4">
         {children}
       </div>
     </>
