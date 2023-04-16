@@ -9,13 +9,7 @@ function Layout({ children }) {
           <li className="mx-3 text-gray-400 hover:text-white transition-all flex items-center">
               <Link href="/">Home</Link>
           </li>
-          <li className="mx-3 text-gray-400 hover:text-white transition-all flex items-center">
-              <Link href="/posts">Posts</Link>
-          </li>
-          <li className="mx-3 text-gray-400 hover:text-white transition-all flex items-center">
-              <Link href="/contact">Contact</Link>
-          </li>
-          <Link href="/create"><button className="btn">Create</button></Link>
+          <Link href="/#"><button className="btn">Hi</button></Link>
         </ul>
       </header>
       <div className="container mx-auto p-4">
